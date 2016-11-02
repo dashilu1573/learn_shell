@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#”Exit immediately if a simple command exits with a non-zero status."在set -e之后出现的代码，一旦出现了返回值非零，整个脚本就会立即退出
+set -e
+
+#返回这个脚本文件放置的目录
+DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+cd $DIR
+
 echo `date`
 
 name="luyafei"
